@@ -8,6 +8,7 @@ urlpatterns = [
     # path('communication/',views.communication,name='communication'),
     # path('',views.main.choice,name='choice'),
     path('headv/', views.headv,name='headv'),
+    path('facilityhome/<str:dept>', views.facilityhome, name='facilityhome'),
     # path('surveillance/', views.navigation,name='sur')
     # path('<str:id>/<str:name>', views.details,name='details'),
     # path('formsentn/', views.searchn,name='formsentn'),

@@ -25,6 +25,8 @@ from login import models
 from django.db import connection
 from django.db.models import Q
 
+import dgm.views as dgmviews # For routing back purposes
+
 def logout(request):
    try:
       del request.session['uid']
@@ -114,6 +116,16 @@ def dispMap(request,airInfo):
     return render(request,"./head/map.html",{'empdetails':empdetails})
 
 
+
+def facilityhome(request, dept=None):
+    if (dept == 'C'):
+        return dgmviews.communication(request)
+    elif (dept == 'N'):
+        return dgmviews.nav(request)
+    elif (dept == 'S'):
+        return dgmviews.surv(request)
+    else:
+        return HttpResponse('Wrong URL, go back')            
 
 def headv(request,uid=1101):
     labels = []

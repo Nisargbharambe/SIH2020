@@ -343,16 +343,16 @@ def calendars(request):
 def communication(request):
     # supdetails = models.Supervisor.objects.all().filter(dept='C')
     supdetails,eng=comdet()
-    return render(request,'dgm/dashboardc.html',{'supdetails':supdetails,'eng':eng,'searched':None})
+    return render(request,'dgm/dashboardc.html',{'supdetails':supdetails,'eng':eng,'searched':None, 'dept':'C'})
     
 def surv(request):
     supdetails,eng=surdet()
-    return render(request,'dgm/dashboards.html',{'supdetails':supdetails,'eng':eng,'searched':None})
+    return render(request,'dgm/dashboards.html',{'supdetails':supdetails,'eng':eng,'searched':None, 'dept':'S'})
 
 def nav(request):
     supdetails,eng=navdet()
    
-    return render(request,'dgm/dashboardn.html',{'supdetails':supdetails,'eng':eng,'searched':None})
+    return render(request,'dgm/dashboardn.html',{'supdetails':supdetails,'eng':eng,'searched':None, 'dept':'N'})
 
 def homev(request,uid):
     labels = []
@@ -885,7 +885,7 @@ def navigation(request):
     for i in com:
             # i.update({'type':'communication'})
             i.update({'token':encode(request,str(i['p_id']))})
-    return render(request,'dgm/list_details.html',{'context':com,'name':'Navigation'})
+    return render(request,'dgm/list_details.html',{'context':com,'name':'Navigation','dept':'N'})
 
 
 def details(request,id,name):
@@ -1348,7 +1348,7 @@ def cdvordaily(request):
         else:
            i['flag']=9
 
-    return render(request,'dgm/list_details.html',{'context':cdvordaily,'name':'Cdvordaily'}) 
+    return render(request,'dgm/list_details.html',{'context':cdvordaily,'name':'Cdvordaily', 'dept':'N'}) 
 
 def cdvorweekly(request):
     cdvorweekly=[entry for entry in models.Cdvorweekly.objects.all().values().order_by('-date')]
@@ -1361,7 +1361,7 @@ def cdvorweekly(request):
         else:
            i['flag']=9
 
-    return render(request,'dgm/list_details.html',{'context':cdvorweekly,'name':'Cdvorweekly'})         
+    return render(request,'dgm/list_details.html',{'context':cdvorweekly,'name':'Cdvorweekly', 'dept':'N'})         
 
 def cdvormonthly(request):
     cdvormonthly=[entry for entry in models.Cdvormonthly.objects.all().values().order_by('-date')]
@@ -1374,7 +1374,7 @@ def cdvormonthly(request):
         else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':cdvormonthly,'name':'Cdvormonthly'})
+    return render(request,'dgm/list_details.html',{'context':cdvormonthly,'name':'Cdvormonthly', 'dept':'N'})
 
 
 
@@ -1388,7 +1388,7 @@ def scctvdaily(request):
            i['flag']=0
         else:
            i['flag']=9
-    return render(request,'dgm/list_details.html',{'context':scctvdaily,'name':'Scctvdaily'})
+    return render(request,'dgm/list_details.html',{'context':scctvdaily,'name':'Scctvdaily', 'dept':'S'})
 
 
 def scctvmonthly(request):
@@ -1402,7 +1402,7 @@ def scctvmonthly(request):
         else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':scctvmonthly,'name':'Scctvmonthly'})
+    return render(request,'dgm/list_details.html',{'context':scctvmonthly,'name':'Scctvmonthly', 'dept':'S'})
 
 def scctvweekly(request):
     scctvweekly=[entry for entry in models.Scctvweekly.objects.all().values().order_by('-date')]
@@ -1415,7 +1415,7 @@ def scctvweekly(request):
         else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':scctvweekly,'name':'Scctvweekly'})
+    return render(request,'dgm/list_details.html',{'context':scctvweekly,'name':'Scctvweekly', 'dept':'S'})
 
 def datisdaily(request):
     datisdaily=[entry for entry in models.Datisdaily.objects.all().values().order_by('-date')]
@@ -1428,7 +1428,7 @@ def datisdaily(request):
            i['flag']=0
         else:
            i['flag']=9
-    return render(request,'dgm/list_details.html',{'context':datisdaily,'name':'Datisdaily'})
+    return render(request,'dgm/list_details.html',{'context':datisdaily,'name':'Datisdaily', 'dept':'C'})
 
 
 # def monthly(request):
@@ -1445,7 +1445,7 @@ def datisweekly(request):
         else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':Datisweekly,'name':'Datisweekly'})
+    return render(request,'dgm/list_details.html',{'context':Datisweekly,'name':'Datisweekly','dept':'C'})
 
 
 def dscndaily(request):
@@ -1459,7 +1459,7 @@ def dscndaily(request):
        else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':dscndaily,'name':'Dscndaily'})
+    return render(request,'dgm/list_details.html',{'context':dscndaily,'name':'Dscndaily','dept':'C'})
 
 def dscnmonthly(request):
     dscnmonthly=[entry for entry in models.Dscnmonthly.objects.all().values().order_by('-date')]
@@ -1472,7 +1472,7 @@ def dscnmonthly(request):
         else:
            i['flag']=9
     
-    return render(request,'dgm/list_details.html',{'context':dscnmonthly,'name':'Dscnmonthly'})
+    return render(request,'dgm/list_details.html',{'context':dscnmonthly,'name':'Dscnmonthly','dept':'C'})
 
 # def dscnweekly(request):
 #     dscnweekly=[entry for entry in models.Dscnweekly.objects.all().values().order_by('-date')]

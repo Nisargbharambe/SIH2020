@@ -40,6 +40,9 @@ urlpatterns = [
     re_path(r'^calendars/',viewsdgm.calendars, name='calendars'),
     re_path(r'^maps/',viewshead.maps, name='maps'),
     
+    path('facilityhome/<str:dept>', viewshead.facilityhome, name='facilityhome'),
+
+
     #routeback for head from charts to map
     path('routebackhome/',viewshead.routebackhome,name='routebackhome'),
     path('logout/',viewshead.logout,name='logout'),

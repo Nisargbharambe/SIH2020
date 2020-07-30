@@ -99,97 +99,23 @@
 							    <div>
 							    	<input type="text" class="form-control form-control-sm" id="status_of_serverB" name="Status of Server B" readonly="true" value="{{ datisd.status_of_serverb }}">
 							    </div>
-							  </div>
-
-							    
+							  </div> 
 							  	<hr>
-						 <!-- 
-							  <div class="form-group row">
-							    <label for="datetime_of_servers_wrt_GPS_CLK" class="col-sm-6 col-form-label">Date and time of servers wrt GPS CLK</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="datetime_of_servers_wrt_GPS_CLK">
-							    </div>
-							  </div>
-
-							    
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="status_of_Disk_array" class="col-sm-6 col-form-label">Status of Disk Array</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="status_of_Disk_array">
-							    </div>
-							  </div>
-
-							   
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="VHFTX_ATIS_status" class="col-sm-6 col-form-label">Status of VHF TX used for ATIS</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="VHFTX_ATIS_status">
-							    </div>
-							  </div>
-
-							    
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="VHFRX_ATIS_status" class="col-sm-6 col-form-label">Status of VHF RX used for ATIS</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="VHFRX_ATIS_status">
-							    </div>
-							  </div>
-
-							    
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="DATIS_update" class="col-sm-6 col-form-label">DATIS Update</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="DATIS_update">
-							    </div>
-							  </div>
-
-							   
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="Audio_quality" class="col-sm-6 col-form-label">Audio Quality</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="Audio_quality">
-							    </div>
-							  </div>
-
-							   
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="REMARKS" class="col-sm-6 col-form-label">Remarks</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="REMARKS">
-							    </div>
-							  </div>
-
-							    
-							  	<hr>
-							  <div class="form-group row">
-							    <label for="Unit_incharge_approval" class="col-sm-6 col-form-label">Unit Incharge Approval</label>
-							    <div>
-							      <input type="text" class="form-control form-control-sm" id="Unit_incharge_approval">
-							    </div>
-							  </div>
-							    <hr> 
-							-->
-							
 				      		</div>				      
-				  		</form>
-					  	<div class="row row1" style="align-items: right; padding-left: 27%; padding-bottom: 1%">
+						  </form>
+						  
+					  	<div class="row" style="align-items: right; padding-bottom: 5%; padding-left: 0; margin: auto;">
 					  		{% if datisd.room_temp < 25 and datisd.status_of_servera == "MAINS" and datisd.status_of_serverb == "STANDBY" and datisd.status_of_ups == "NORMAL" and datisd.status_of_ac == "SVCBL" or datisd.room_temp < 25 and datisd.status_of_servera == "STANDBY" and datisd.status_of_serverb == "MAINS" and datisd.status_of_ups == "NORMAL" and datisd.status_of_ac == "SVCBL" %}
-							  <button class="btn submitbut" target="_blank" onclick="window.location.href='/report/{{ datisd.p_id }}/{{ id }}'">DOWNLOAD REPORT</button>
+							  <button class="btn submitbut" style="margin: 0 5px;" target="_blank" onclick="window.location.href='/report/{{ datisd.p_id }}/{{ id }}'">DOWNLOAD REPORT</button>
 								{% elif f != 1  %}
 								   
-								    <button style="width: 100px; margin-right: 10%;"class="btn submitbut" onclick="window.location.href='/editdatisd/{{ datisd.p_id }}'">EDIT</button>
+								    <button style="width: 80px; margin: 0 5px;"class="btn submitbut" onclick="window.location.href='/editdatisd/{{ datisd.p_id }}'">EDIT</button>
 
-								   <button class="btn submitbut" onclick="window.location.href='/repsuberrors/{{ datisd.p_id }}/{{ id }}'">SUBMIT WITH ERRORS</button>						
+								   <button class="btn submitbut" style="margin: 0 5px;" onclick="window.location.href='/repsuberrors/{{ datisd.p_id }}/{{ id }}'">SUBMIT WITH ERRORS</button>						
 								   
 						
 								   {% endif %}
-								   <button class="btn submitbut" onclick="window.open('/report/{{ datisd.p_id }}/{{ id }}')">DOWNLOAD REPORT</button>
+								   <button class="btn submitbut" style="margin: 0 5px;" onclick="window.open('/report/{{ datisd.p_id }}/{{ id }}')">DOWNLOAD REPORT</button>
 					  	</div>
 				  		
 					</div>				  		

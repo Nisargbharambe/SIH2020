@@ -84,6 +84,7 @@ def validate(request):
             if (uid == str(i.head_id)) & (check_password(passw,i.password)) :
                 flag=0
                 request.session['type']='h'
+                request.session['uid']=id
                 airInfo=models.Airport.objects.all().values()
                 return dispMap(request,airInfo)
     elif b=='3' :

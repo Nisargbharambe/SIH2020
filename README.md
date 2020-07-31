@@ -10,4 +10,4 @@ For ***Windows***:
 						}**						          <br>from **DATABASES['default']**
 						
 For ***Linux***:
-	If using Lampp stack, please retain **OPTIONS** in **DATABASES['default']**
+	If using Lampp stack, please retain **OPTIONS** in **DATABASES['default']** as mysql is present in /opt/lampp/lampp

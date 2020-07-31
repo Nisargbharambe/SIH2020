@@ -39,35 +39,35 @@ a{ text-decoration: none !important; }
 }
 .card.cardlogo
 {
-	width: 18rem; height: 27rem; overflow-y:hidden; border-radius: 30px; background-color:#FFFFFF; font-family: 'Gotu', sans-serif;
+	width: 14.5vw; height: 46vh; overflow-y:hidden; border-radius: 4vmin; background-color:#FFFFFF; font-family: 'Gotu', sans-serif;
 }
 .card-img-top
 {
-	width:100px; border-radius:50%; margin-left: 40px; margin-top:20px;
+	width:20vmin; border-radius:4vmin; margin-left: 3vw; margin-top:2vmin;
 }
 .card-title
 {
-	text-align: center; font-size: 22px; color: #1E72FA; text-decoration: bold;
+	text-align: center; font-size: 3.5vh; color: #1E72FA; text-decoration: bold;
 }
 .card-subtitle
 {
-	text-align: center; font-size: 18px; color: #1E72FA; text-decoration: bold;
+	text-align: center; font-size: 3vh; color: #1E72FA; text-decoration: bold;
 }
 .card-subsubtitle
 {
-	text-align: center; font-size: 14px; color: #1E72FA; text-decoration: bold;
+	text-align: center; font-size: 2vh; color: #1E72FA; text-decoration: bold;
 }
 .data-emp
 {
-	background-color:#FFFFFF; border-radius: 30px; border-color:grey; color: #1E72FA; text-align: center; font-size: 12px;
+	background-color:#FFFFFF; border-radius: 4vmin; border-color:grey; color: #1E72FA; text-align: center; font-size: 2vh;
 }
 .card.cardcontact
 {
-	margin-top: 5px; font-family: 'Gotu', sans-serif;width: 18rem; border-radius: 15px; background-color:#1E72FA; 
+	margin-top: 2vh; font-family: 'Gotu', sans-serif;width: 14.5vw; border-radius: 4vmin; background-color:#1E72FA; 
 }
 .headcard
 {
-	background-color:#1E72FA; border-radius: 30px; border-color:grey; color: white; text-align: center; font-size: 14px;
+	background-color:#1E72FA; border-radius: 4vmin; border-color:grey; color: white; text-align: center; font-size: 2vh;
 }
 .contactbut
 {
@@ -107,7 +107,7 @@ a{ text-decoration: none !important; }
 }
 .tabcard
 {
-	font-family: 'Gotu', sans-serif; width: 24rem; height:28rem; background-color:#1E72FA; border-radius:15px 0px 0px 15px;
+	font-family: 'Gotu', sans-serif; width: 18vw; height:48vh; background-color:#1E72FA; border-radius:3vmin 0px 0px 3vmin;
 }
 .todays
 {
@@ -123,19 +123,19 @@ a{ text-decoration: none !important; }
 }
 .factab a
 {
-	padding: 0 !important; height:12px; background-color: rgba(83, 98, 203, 1) !important; color: white !important;
+	padding: 0 !important; height:48vh; background-color: rgba(83, 98, 203, 1) !important; color: white !important;
 }
 .tabcol
 {
-	background-color: rgba(235, 243, 255, 1) ; width: 52rem !important; height:28rem !important; border-radius: 0px 15px 15px 0px;
+	background-color: rgba(235, 243, 255, 1) ; width: 40vw !important; height:48vh !important; border-radius: 0px 3vmin 3vmin 0px;
 	}
 .todaytab
 {
-	width: 50rem; height:26rem; background-color: rgba(235, 243, 255, 1);
+	width: 40vw; height:48vh; background-color: rgba(235, 243, 255, 1);
 }
 .tod
 {
-	padding: 50px 7px 50px 7px;background-color: rgba(235, 243, 255, 1); 	font-family: 'Gotu', sans-serif;  overflow-y: auto; max-height: 28rem; overflow-x: hidden;
+	padding: 50px 7px 50px 7px;background-color: rgba(235, 243, 255, 1); 	font-family: 'Gotu', sans-serif;  overflow-y: auto; max-height: 48vh; overflow-x: hidden;
 }
 
 .tablink {

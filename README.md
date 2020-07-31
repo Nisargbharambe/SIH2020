@@ -3,7 +3,7 @@ Database: **cns_.sql**
 <br>
 <br>
 
-Requirements: *** pip install -r requirements.txt *** <br><br>
+Requirements: ***pip install -r requirements.txt*** <br><br>
 
 In path: *SIH2020/admin/settings.py* <br><br>
 For ***Windows***:

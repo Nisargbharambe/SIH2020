@@ -20,7 +20,7 @@ from dgm.views import homev as homev
 from django.http import HttpResponse
 from . import models
 from django.db import connection
-from head.views import headv as headv
+
 # Create your views here.
 def login(request):
     if request.session.has_key('uid') and request.session.get('type')=='e':
@@ -48,8 +48,8 @@ def validate(request):
     flag=1
     temp=uid
     id = uid
-    b=temp[0]+""+temp[1]
-    if b=='41' :
+    b=temp[0]
+    if b=='4' :
         x=models.Engineer.objects.all()
         for i in x:  
             if (uid == str(i.emp_id)) & (check_password(passw,i.password)) :
@@ -65,7 +65,7 @@ def validate(request):
                 elif dept =="S" :
                     request.session['type']='e'
                     return dhomeviews(request,id)
-    elif b=='21' :
+    elif b=='2' :
         request.session['key']=frt.generate_key().decode('utf-8')
         x=models.Dgm.objects.all()
         for i in x:
@@ -77,17 +77,16 @@ def validate(request):
                # y=models.Airport.objects.filter(a_id=i.a_id).values()
                # print(y[0])
                # return render(request,'./dgm/dgm.html',{'name':y[0]})
-    elif b=='11' :
+    elif b=='1' :
         request.session['key']=frt.generate_key().decode('utf-8')
         x=models.Head.objects.all()
         for i in x:
             if (uid == str(i.head_id)) & (check_password(passw,i.password)) :
                 flag=0
                 request.session['type']='h'
-                request.session['uid'] = id
                 airInfo=models.Airport.objects.all().values()
                 return dispMap(request,airInfo)
-    elif b=='31' :
+    elif b=='3' :
         request.session['key']=frt.generate_key().decode('utf-8')
         x=models.Supervisor.objects.all()
         for i in x:
@@ -98,7 +97,6 @@ def validate(request):
                 request.session['dept']=supInfo[0]['dept']
                 return run_sup(request,uid)
     if flag==1 :
-        print("wrong")
         return render(request,'login/login.html',{'flag':flag})
 
             

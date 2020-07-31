@@ -18,6 +18,12 @@
 			<div class="col-sm-8">
 				<div class="connexion">
 					<div class="card">
+						{% if flag == 1 %}
+						<div class="alert alert-danger" style="text-align: center; position: absolute; width: 100%; font-size: 10px;opacity: 0.8;">
+							<strong>Employee ID or Password Incorrect</strong>
+							<br> Try again.
+						</div>
+						{% endif %}
 						<form method='POST' action='/validate/'>
 						{% csrf_token %}
 							<div class="contact-form">

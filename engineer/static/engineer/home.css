@@ -127,11 +127,11 @@ a{ text-decoration: none !important; }
 }
 .tabcol
 {
-	background-color: rgba(235, 243, 255, 1) ; width: 38vw !important; height:48vh !important; border-radius: 0px 3vmin 3vmin 0px;
+	background-color: rgba(235, 243, 255, 1) ; width: 36vw !important; height:48vh !important; border-radius: 0px 3vmin 3vmin 0px;
 	}
 .todaytab
 {
-	width: 38vw; height:48vh; background-color: rgba(235, 243, 255, 1);
+	width: 36vw; height:48vh; background-color: rgba(235, 243, 255, 1);
 }
 .tod
 {

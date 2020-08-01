@@ -119,7 +119,7 @@ a{ text-decoration: none !important; }
 }
 .logout
 {
-	margin-top: 110px; margin-left: 140px; height:30x; border-radius:30px !important; background-color: #EBF3FF !important; color: black !important;
+	margin-top: 17vh; margin-left: 10vw; height:6vh; border-radius:3vmin !important; background-color: #EBF3FF !important; color: black !important;
 }
 .factab a
 {
@@ -127,11 +127,11 @@ a{ text-decoration: none !important; }
 }
 .tabcol
 {
-	background-color: rgba(235, 243, 255, 1) ; width: 40vw !important; height:48vh !important; border-radius: 0px 3vmin 3vmin 0px;
+	background-color: rgba(235, 243, 255, 1) ; width: 38vw !important; height:48vh !important; border-radius: 0px 3vmin 3vmin 0px;
 	}
 .todaytab
 {
-	width: 40vw; height:48vh; background-color: rgba(235, 243, 255, 1);
+	width: 38vw; height:48vh; background-color: rgba(235, 243, 255, 1);
 }
 .tod
 {

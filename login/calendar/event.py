@@ -41,7 +41,7 @@ def create_event(facility = None, location = None, description = None):
     'location': location + 'Airport',
     'description': description,
     'start': {
-        'dateTime': datetime.datetime.now().isoformat(),
+        'dateTime': (datetime.datetime.now() + datetime.timedelta(hours=1)).isoformat(),
         'timeZone': 'Asia/Kolkata',
     },
     'end': {

@@ -31,24 +31,19 @@
 					<div class="card cardlogo" style="word-wrap: break-word;" >
 						<img class="card-img-top" src="{% static '/images/man1.jpg' %}" alt="FACE">
 						<div class="card-body">
-						  	<br>
 						  	{% for empdets in empdet %}
 						    <h5 class="card-title">{{empdets.name }}</h5>
 							<div class="data-emp">
 								<h6 class="card-subsubtitle">{{ empdets.designation }}</h6>
 								{% endfor %}  
 	    						 {% csrf_token %}
-								<br>
 								{% for name1 in name %}
 								<h6 class="card-subsubtitle">{{ name1.name }} Airport</h6>
-								{% endfor %}							
-								<br>
+								{% endfor %}	
 							</div>
+							<a role="button" class="btn btn-primary" style="background-color: #1e72fa; color: white; border-radius: 30px; margin:0 1.5vw;" href="{% url 'mcdo-home' %}" >Monthly Reports</a>
 					   </div>
 					</div>
-
-					<!-- Monthly reports module -->
-					<a class="btn btn-primary btn-sm" href="{% url 'mcdo-home' %}" role="button">Monthly Reports</a>
 
 					<div class="card cardcontact">	
 						<div class="card-body headcard">

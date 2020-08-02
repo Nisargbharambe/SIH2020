@@ -8,6 +8,8 @@ from django.http import HttpResponse
 from .. import models
 from django.db import connection
 
+from login.calendar.event import create_event
+
 def dhomeview(request,id) :   #communication dept
     request.session['uid']= id
     cursor = connection.cursor() 
@@ -71,6 +73,11 @@ def dhomeview(request,id) :   #communication dept
          else : 
             break
         datisd_deadline = date.today()
+
+        ##### Calender Event Call
+        if(datisd_deadline == date.today()):
+            location = models.Engineer.objects.get(emp_id = id).a.name
+            create_event("DATIS Daily", location, "Today's scheduled maintenance ")
           
     #!!!!!!!!!!!!!!!!!!!!!!!datis weekly!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     p_id = models.Datisweekly.objects.all()
@@ -184,6 +191,12 @@ def dhomeview(request,id) :   #communication dept
          else : 
             break
         dscnd_deadline = date.today()
+
+        ##### Calender Event Call
+        if(dscnd_deadline == date.today()):
+            location = models.Engineer.objects.get(emp_id = id).a.name
+            create_event("DSCN Daily", location, "Today's scheduled maintenance ")
+        
    
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!dscn monthly!!!!!!!!!!!!!!!!!!!!!!!!!!
     
